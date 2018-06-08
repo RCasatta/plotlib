@@ -89,7 +89,7 @@ pub fn draw_y_axis(a: &axis::ContinuousAxis, face_height: f64) -> node::element:
             .set("text-anchor", "end")
             .set("dominant-baseline", "middle")
             .set("font-size", 12)
-            .add(node::Text::new(tick.to_string()));
+            .add(node::Text::new(format!("{:2.2}",tick) ));
         labels.append(tick_label);
     }
 
